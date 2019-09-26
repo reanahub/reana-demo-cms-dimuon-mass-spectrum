@@ -132,72 +132,72 @@ edm::Service<TFileService> fs;
 // intended for muons from Mu sample
 
 // global muon multiplicity
-h10 = fs->make<TH1D>("GMmultiplicty", "GMmultiplicity", 8, 0, 8);
+h10 = fs->make<TH1D>("GM_Multiplicty", "GM_Multiplicity", 8, 0, 8);
 h10->GetXaxis()->SetTitle("Number of Global Muons");
 h10->GetYaxis()->SetTitle("Number of Events");
 
 // global muon momentum
-h1 = fs->make<TH1D>("GMmomentum", "GM_Momentum", 240, 0., 120.);
+h1 = fs->make<TH1D>("GM_Momentum", "GM_Momentum", 240, 0., 120.);
 h1->GetXaxis()->SetTitle("Global Muon Momentum (in GeV/c)");
 h1->GetYaxis()->SetTitle("Number of Events");
 
 // global muon Transverse_momentum
-h2 = fs->make<TH1D>("GM_Transverse_momentum", "TransverseMomentum", 240, 0., 120.);
-h2->GetXaxis()->SetTitle("Transverse Momentum of global muons (in GeV/c)");
+h2 = fs->make<TH1D>("GM_Transverse_Momentum", "Transverse_Momentum", 240, 0., 120.);
+h2->GetXaxis()->SetTitle("Transverse Momentum of Global Muons (in GeV/c)");
 h2->GetYaxis()->SetTitle("Number of Events");
 
 // global muon pseudorapity
-h3 = fs->make<TH1D>("GM_eta", "GM_Eta", 140, -3.5, 3.5);
-h3->GetXaxis()->SetTitle("Eta of global muons (in radians)");
+h3 = fs->make<TH1D>("GM_Eta", "GM_Eta", 140, -3.5, 3.5);
+h3->GetXaxis()->SetTitle("Eta of Global Muons");
 h3->GetYaxis()->SetTitle("Number of Events");
 
 // global muon azimuth angle
-h4 = fs->make<TH1D>("GM_phi", "GM_phi", 314, -3.15, 3.15);
-h4->GetXaxis()->SetTitle("Phi");
+h4 = fs->make<TH1D>("GM_Phi", "GM_Phi", 314, -3.15, 3.15);
+h4->GetXaxis()->SetTitle("Phi (in radians)");
 h4->GetYaxis()->SetTitle("Number of Events");
 
 // dimuon mass spectrum up to 4 GeV (low mass range, rho/omega, phi, psi)
-h5 = fs->make<TH1D>("GMmass" , "GMmass" , 400, 0. , 4. );
+h5 = fs->make<TH1D>("GM_Mass" , "GM_Mass" , 400, 0. , 4. );
 h5->GetXaxis()->SetTitle("Invariant Mass for Nmuon>=2 (in GeV/c^2)");
 h5->GetYaxis()->SetTitle("Number of Events");
 
 // dimuon mass spectrum up to 120 GeV (high mass range: upsilon, Z)
-h6 = fs->make<TH1D>("GMmass_extended" , "GMmass" , 240, 0. , 120. );
+h6 = fs->make<TH1D>("GM_Mass_Extended" , "GM_mass" , 240, 0. , 120. );
 h6->GetXaxis()->SetTitle("Invariant Mass for Nmuon>=2 (in GeV/c^2)");
 h6->GetYaxis()->SetTitle("Number of Events");
 
 // global muon track chi2
-h53 = fs->make<TH1D>("GM_chi2", "GM_Chi2", 300, 0, 150);
+h53 = fs->make<TH1D>("GM_Chi2", "GM_Chi2", 300, 0, 150);
 h53->GetXaxis()->SetTitle("Chi2 values");
 h53->GetYaxis()->SetTitle("Number of Events");
 
 // global muon track number of degrees of freedom
-h54 = fs->make<TH1D>("GM_ndof", "GM_ndof", 100, 0, 100);
-h54->GetXaxis()->SetTitle("Ndof values");
+h54 = fs->make<TH1D>("GM_NDOF", "GM_Number_of_Degrees_Of_Freedom", 100, 0, 100);
+h54->GetXaxis()->SetTitle("Number of Degrees of Freedom");
 h54->GetYaxis()->SetTitle("Number of Events");
 
 // global muon track chi2 normalized to number of degrees of freedom
-h55 = fs->make<TH1D>("GM_normalizedchi2", "GM_normalizedChi2", 200, 0, 20);
-h55->GetXaxis()->SetTitle("NormalizedChi2 values");
+h55 = fs->make<TH1D>("GM_Normalized_Chi2", "GM_Normalized_Chi2", 200, 0, 20);
+h55->GetXaxis()->SetTitle("Normalized_Chi2 values");
 h55->GetYaxis()->SetTitle("Number of Events");
 
 // global muon track, number of valid hits
-h60 = fs->make<TH1D>("GM_validhits", "GM_ValidHits", 100, 0., 100);
-h60->GetXaxis()->SetTitle("Number of valid hits");
+h60 = fs->make<TH1D>("GM_Valid_Hits", "GM_Valid_Hits", 100, 0., 100);
+h60->GetXaxis()->SetTitle("Number of Valid Hits");
 h60->GetYaxis()->SetTitle("Number of Events");
 
 // global muon track, number of pixel hits
-h61 = fs->make<TH1D>("GM_pixelhits", "GM_pixelhits", 14, 0., 14);
-h61->GetXaxis()->SetTitle("Munber of pixel hits");
+h61 = fs->make<TH1D>("GM_Pixel_Hits", "GM_Pixel_Hits", 14, 0., 14);
+h61->GetXaxis()->SetTitle("Number of Pixel Hits");
 h61->GetYaxis()->SetTitle("Number of Events");
 
 // main histogram for MUO-10-004
 
 // unlike sign dimuon invariant mass from global muon selection,
 // binning chosen to correspond to log(0.3) - log(500), 200 bins/log10 unit
-h100 = fs->make<TH1D>("GM_mass_log", "GM mass log", 644, -.52, 2.7);
+h100 = fs->make<TH1D>("GM_Mass_Log", "GM_Mass_Log", 644, -.52, 2.7);
 h100->GetXaxis()->SetTitle("Invariant Log10(Mass) for Nmuon>=2 (in log10(m/GeV/c^2))");
-h100->GetYaxis()->SetTitle("Number of Events/GeV");
+h100->GetYaxis()->SetTitle("Number of Events / GeV");
 
 }
 
@@ -418,4 +418,4 @@ void DimuonSpectrum2011::endJob() {
 }
 
 //define this as a plug-in
-DEFINE_FWK_MODULE(DimuonSpectrum2011);                                                                            
+DEFINE_FWK_MODULE(DimuonSpectrum2011);
