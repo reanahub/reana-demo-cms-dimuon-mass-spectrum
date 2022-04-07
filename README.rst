@@ -2,6 +2,9 @@
  REANA example - CMS dimuon mass spectrum
 ==========================================
 
+.. image:: https://www.reana.io/static/img/badges/launch-on-reana-at-cern.svg
+   :target: https://reana.cern.ch/launch?url=https%3A%2F%2Fgithub.com%2Freanahub%2Freana-demo-cms-dimuon-mass-spectrum&name=reana-demo-cms-dimuon-mass-spectrum
+
 About
 ======
 
@@ -87,6 +90,20 @@ The  run will create DoubleMu.root output file in the `ROOT
 
 Running the example on REANA cloud
 ==================================
+
+There are two ways to execute this analysis example on REANA.
+
+If you would like to simply launch this analysis example on the REANA instance
+at CERN and inspect its results using the web interface, please click on
+the following badge:
+
+.. image:: https://www.reana.io/static/img/badges/launch-on-reana-at-cern.svg
+   :target: https://reana.cern.ch/launch?url=https%3A%2F%2Fgithub.com%2Freanahub%2Freana-demo-cms-dimuon-mass-spectrum&name=reana-demo-cms-dimuon-mass-spectrum
+
+|
+
+If you would like a step-by-step guide on how to use the REANA command-line
+client to launch this analysis example, please read on.
 
 We start by creating a `reana.yaml <reana.yaml>`_ file describing the above
 analysis structure with its inputs, code, runtime environment, computational
