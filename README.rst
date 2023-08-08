@@ -124,7 +124,7 @@ workflow steps and expected outputs:
         specification:
           steps:
             - name: demoanalyzer
-              environment: 'cmsopendata/cmssw_5_3_32'
+              environment: 'docker.io/cmsopendata/cmssw_5_3_32'
               commands:
                 - >
                   source /opt/cms/cmsset_default.sh

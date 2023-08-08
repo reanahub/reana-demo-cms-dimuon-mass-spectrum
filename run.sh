@@ -2,7 +2,7 @@
 
 # This script uses standalone Docker. Run it as follows:
 #
-# $ docker run --rm -i -t -v `pwd`:/w  cmsopendata/cmssw_5_3_32 /w/run.sh
+# $ docker run --rm -i -t -v `pwd`:/w  docker.io/cmsopendata/cmssw_5_3_32 /w/run.sh
 #
 # Check results via:
 #
