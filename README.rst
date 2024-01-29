@@ -170,12 +170,3 @@ the resulting ROOT file containing plots:
 Please see the `REANA-Client <https://reana-client.readthedocs.io/>`_
 documentation for more detailed explanation of typical ``reana-client`` usage
 scenarios.
-
-Contributors
-============
-
-The list of contributors in alphabetical order:
-
-- `Radovan Lascsak <https://orcid.org/0000-0002-8412-5702>`_
-- `Ronald Dobos  <https://orcid.org/0000-0003-2914-000X>`_
-- `Tibor Simko <https://orcid.org/0000-0001-7202-5803>`_
