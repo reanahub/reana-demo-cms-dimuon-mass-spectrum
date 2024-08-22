@@ -29,3 +29,8 @@ workflow:
 outputs:
   files:
     - CMSSW_5_3_32/src/reana-demo-cms-dimuon-mass-spectrum/DimuonSpectrum2011/DoubleMu.root
+tests:
+  files:
+    - tests/log-messages.feature
+    - tests/run-duration.feature
+    - tests/workspace-files.feature
