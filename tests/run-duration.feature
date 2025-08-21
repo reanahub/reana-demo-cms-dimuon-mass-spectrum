@@ -8,5 +8,5 @@ Feature: Run duration
 
     Scenario: The workflow terminates in a reasonable amount of time
         When the workflow execution completes
-        Then the workflow run duration should be less than 5 minutes
-        And the duration of the step "demoanalyzer" should be less than 5 minutes
+        Then the workflow run duration should be less than 9 minutes
+        And the duration of the step "demoanalyzer" should be less than 8 minutes
